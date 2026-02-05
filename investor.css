@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background: #020817;
+  color: white;
+  padding: 30px;
+}
+
+/* Grid */
+.grid {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: .15;
+  z-index: -1;
+}
+
+/* Header */
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.dash-header span {
+  font-weight: 300;
+  opacity: .6;
+}
+
+.status {
+  color: #4fc3f7;
+  font-size: 14px;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(15px);
+  padding: 25px;
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.card h3 {
+  opacity: .7;
+  font-size: 14px;
+}
+
+.big {
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.big span {
+  font-size: 18px;
+  opacity: .6;
+}
+
+.green {
+  color: #4fc3f7;
+}
+
+/* Chart */
+.chart-section {
+  background: rgba(255,255,255,.04);
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,.1);
+  margin-bottom: 40px;
+}
+
+canvas {
+  width: 100%;
+  height: 200px;
+}
+
+/* Vision */
+.vision {
+  background: rgba(255,255,255,.03);
+  padding: 30px;
+  border-left: 4px solid #4fc3f7;
+}
+
+.vision p {
+  opacity: .75;
+  line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}

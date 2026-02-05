@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #050b18;
+  color: white;
+  overflow: hidden;
+}
+
+/* Grid background */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.15;
+}
+
+/* Animated Grid */
+.grid {
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size:60px 60px;
+  animation:gridMove 20s linear infinite;
+  opacity:.2;
+}
+
+@keyframes gridMove {
+  from { background-position:0 0; }
+  to { background-position:60px 60px; }
+}
+
+
+/* Header */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.top-bar nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+.primary {
+  padding: 8px 18px;
+  border: 1px solid #4fc3f7;
+}
+
+/* Hero */
+.hero-os {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+}
+
+
+.hero-os p {
+  margin: 20px 0;
+  max-width: 420px;
+  opacity: 0.7;
+}
+
+.actions .btn {
+  padding: 14px 30px;
+  border: 1px solid #4fc3f7;
+  margin-right: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.ghost {
+  border-color: rgba(255,255,255,0.3);
+}
+
+/* Auth Pages */
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.auth-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  width: 340px;
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 30px;
+}
+.auth-card h2 {
+  margin-bottom: 20px;
+}
+.auth-card p {
+  margin-bottom: 20px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #4fc3f7;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-card span {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+.auth-card span a {
+  color: #008cff;
+}

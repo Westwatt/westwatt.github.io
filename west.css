@@ -1,0 +1,267 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family:Inter,sans-serif; }
+
+body {
+  background:#020817;
+  color:white;
+  overflow: none;
+  max-width: 100%;
+}
+
+/* Animated Grid */
+.grid {
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(rgba(114, 114, 114, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.09) 1px, transparent 1px);
+  background-size:150px 150px;
+  animation:gridMove 20s linear infinite;
+  opacity:.2;
+}
+
+@keyframes gridMove {
+  from { background-position:0 0; }
+  to { background-position: 60px 60px; }
+}
+
+/* Energy Orb */
+.energy-orb {
+  position:absolute;
+  width: 400px;
+  height: 400px;
+  border-radius:50%;
+  background:radial-gradient(circle,#4fc3f7,transparent 60%);
+  filter:blur(30px);
+  top:30%;
+  right:15%;
+  animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-30px); }
+}
+
+/* Header */
+.top {
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding:30px 60px;
+  z-index:2;
+  position:relative;
+}
+
+.top nav a {
+  color:white;
+  margin-left:25px;
+  text-decoration:none;
+}
+.top h1 {
+  font-family: poppins;
+  font-size: 30px;
+}
+
+
+.primary {
+  border:1px solid #4fc3f7;
+  padding:6px 16px;
+}
+.humbuger span{
+  background-color: #fff;
+  padding: 2px 16px;
+  display: none;
+  flex-direction: column;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+/* Hero */
+.hero {
+  height:80vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-left:60px;
+  position:relative;
+  z-index:2;
+}
+
+.hero h2 {
+  font-size:72px;
+  line-height: 1.2;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.hero p {
+  margin:60px 0px;
+  opacity:.7;
+}
+
+.cta a {
+  padding:14px 28px;
+  border:1px solid #4fc3f7;
+  margin-right:15px;
+  color:white;
+  text-decoration:none;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 80px 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.metric {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(15px);
+  padding: 60px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.metric h3 {
+  font-size: 48px;
+  color: #4fc3f7;
+}
+
+.metric p {
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+.systems {
+  padding: 80px 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.systems h2 {
+  text-align: center;
+  font-size: 25px;
+  margin: 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.4s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: #4fc3f7;
+}
+
+.service-card h3 {
+  color: #4fc3f7;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  opacity: 0.75;
+}
+
+/* ===== SERVICES ===== */
+.services {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 80px 60px;
+  position: relative;
+  z-index: 2;
+}
+.services .card {
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(15px);
+  padding: 30px 55px;
+  margin: 10px 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.4s;
+  line-height: 1.5;
+}
+.services .card:hover {
+  transform: translateY(-10px);
+  border-color: #4fc3f7;
+}
+.services a{
+  color: #4fc3f7;
+}
+
+.services1 h2 {
+  text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  body {
+    overflow-y: auto;
+  }
+
+  .top {
+    padding: 20px;
+  }
+   nav {
+    display: none;
+  }
+
+  .top nav {
+    display: none;
+  }
+  .humbuger span{
+  display: flex;
+ 
+}
+
+  .hero {
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  .hero h2 {
+    font-size: 42px;
+  }
+
+  .energy-orb {
+    width: 180px;
+    height: 180px;
+    top: 15%;
+    right: 20px;
+  }
+
+  .cta a {
+    display: block;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+    .services {
+    padding: 40px 20px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+   .metrics {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+  .services{
+    display: flex;
+    flex-direction: column;
+  }
+ 
+}
+
